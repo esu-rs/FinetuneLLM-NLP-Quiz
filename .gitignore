@@ -1,6 +1,8 @@
 dataset/*.csv
 !dataset/example.csv
 
+output/*.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
