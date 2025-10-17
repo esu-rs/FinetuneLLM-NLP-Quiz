@@ -11,7 +11,7 @@ model = SentenceTransformer("Manal0809/medical-term-similarity")
 
 print("score.py: generate scores between 0.0 and 1.0 for how accurate actual labels are")
 
-filename = input("Enter inference output .csv with LLM-generated labels (e.g. output/baseline.csv): output/")
+filename = input("Enter inference output .csv with LLM-generated labels (e.g. output/output.csv): output/")
 
 def score(expected_: list[str], actual_: list[str]) -> float:
 	"""

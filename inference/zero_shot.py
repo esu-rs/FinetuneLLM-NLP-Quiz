@@ -43,7 +43,7 @@ with open(join(dirname(dirname(__file__)), "dataset", data), "r", encoding="cp12
 		print(f"Completed {i} rows")
 
 # Write output
-with open(join(dirname(dirname(__file__)), "output", "baseline.csv"), "w", encoding="utf-8") as file:
+with open(join(dirname(dirname(__file__)), "output", "output.csv"), "w", encoding="utf-8") as file:
 	writer = csv.writer(file)
 	writer.writerow(["case_id", "input_finding", "output_disease", "llm_thinking", "llm_labels"])
 	writer.writerows(output_rows)
