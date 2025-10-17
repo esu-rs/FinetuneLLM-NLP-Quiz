@@ -9,3 +9,4 @@ unsloth == 2025.10.4
 unsloth-zoo == 2025.10.4
 pandas
 trl
+datasets
