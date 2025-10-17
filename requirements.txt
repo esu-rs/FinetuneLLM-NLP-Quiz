@@ -7,3 +7,5 @@ numpy == 2.3.4
 huggingface-hub == 0.35.3
 unsloth == 2025.10.4
 unsloth-zoo == 2025.10.4
+pandas
+trl
