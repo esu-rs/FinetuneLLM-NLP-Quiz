@@ -1,5 +1,5 @@
 """
-Run the dataset through zero-shot prompting the LLM to get a baseline. 
+Run the dataset through zero-shot prompting an LLM. 
 """
 import csv
 from os import mkdir
@@ -19,7 +19,7 @@ if not exists(join(dirname(dirname(__file__)), "output")):
 	mkdir(join(dirname(dirname(__file__)), "output"))
 
 model_name = input("Enter LLM to use (e.g. 'unsloth/Qwen3-4B-unsloth-bnb-4bit'): ")
-data = input("Enter dataset .csv: dataset/")
+data = input("Enter test dataset .csv: dataset/")
 output_rows: list[list[str]] = []
 
 with open(join(dirname(dirname(__file__)), "dataset", data), "r", encoding="cp1252") as file:
