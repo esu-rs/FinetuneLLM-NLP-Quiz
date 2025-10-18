@@ -2,6 +2,7 @@ dataset/*.csv
 !dataset/example.csv
 
 output/*.csv
+output/old/*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
