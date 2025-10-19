@@ -54,6 +54,9 @@ python -m evaluation.score
 
 Again, enter the model and the output .csv from the inference step above.
 
+#### Evaluation Metric
+To compare LLM-generated disease labels with expected labels, each label is encoded by an [embedding model](https://huggingface.co/Manal0809/medical-term-similarity) specialized in medical term similarities, and the pair of labels (one from expected, one from actual) with the highest cosine similarity is repeatedly removed until any of the lists are empty. The score is determined to be the average of the extracted cosine similarities.
+
 ## Finetuning
 To finetune a model on a train dataset .csv:
 ```
@@ -65,9 +68,9 @@ When asked, provide the model and your train dataset .csv filename.
 For hyperparameters used, see [here](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/finetune/no_think.py#L31) and [here](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/finetune/no_think.py#L71).
 
 
-When the Python shell becomes interactive (finetuning finished), you can upload the weights to your Hugging Face account:
+When Python becomes interactive (finetuning complete), upload the weights to your Hugging Face:
 ```
-model.push_to_hub_merged("hf_user/repo", tokenizer, save_method="merged_4bit_forced", token="<TOKEN>")
+model.push_to_hub_merged("hf_user/repo", tokenizer, save_method="merged_4bit_forced", token="")
 ```
 
 ## Finetuned Scores
@@ -85,7 +88,13 @@ python -m evaluation.score
 
 # Results
 
-<!-- table -->
+Scores above 0.85:
+
+| Model | Baseline | FT 0.85 | FT 0.80 | FT 0.65 |
+| ----- | -------- | ------- | ------- | ------- |
+| Qwen 3 4B | X | Y (**+Z%**) | Y (**+Z%**) | Y (**+Z%**) |
+| Qwen 3 8B | X | Y (**+Z%**) | Y (**+Z%**) | Y (**+Z%**) |
+
 
 The complete baseline and finetuned output labels and evaluation scores can be found in [results.xlsx](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/output/results.xlsx).
 
