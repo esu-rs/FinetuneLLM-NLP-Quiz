@@ -87,14 +87,12 @@ python -m evaluation.score
 ---
 
 # Results
+B = Baseline, F = Finetuned; 0.85 = number of 236 test set rows with at least 0.85 score.
 
-Scores above 0.85:
-
-| Model | Baseline | FT 0.85 | FT 0.80 | FT 0.65 |
+| Model | B 0.85 | F 0.85 | B 0.65 | F 0.65 |
 | ----- | -------- | ------- | ------- | ------- |
-| Qwen 3 4B | X | Y (**+Z%**) | Y (**+Z%**) | Y (**+Z%**) |
-| Qwen 3 8B | X | Y (**+Z%**) | Y (**+Z%**) | Y (**+Z%**) |
-
+| Qwen 3 4B | 68 | 78 (**+15%**) | 170 | 171 (**+1%**) |
+| Qwen 3 8B | 74 | 84 (**+14%**) | 179 | 180 (**+1%**) |
 
 The complete baseline and finetuned output labels and evaluation scores can be found in [results.xlsx](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/output/results.xlsx).
 
