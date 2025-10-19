@@ -47,3 +47,5 @@ with open(join(dirname(dirname(__file__)), "output", "output.csv"), "w", encodin
 	writer = csv.writer(file)
 	writer.writerow(["case_id", "input_finding", "output_disease", "llm_thinking", "llm_labels"])
 	writer.writerows(output_rows)
+
+print("Created -> output/output.csv")

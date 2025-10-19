@@ -97,5 +97,5 @@ B = Baseline, F = Finetuned; 0.85 = number of 236 test set rows with at least 0.
 The complete baseline and finetuned output labels and evaluation scores can be found in [results.xlsx](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/output/results.xlsx).
 
 The finetuned models are available on Hugging Face:
-- https://huggingface.co/evansu/qwen3_4b_disease_label_ft_v4
-- https://huggingface.co/evansu/qwen3_8b_disease_label_ft_v4
+- https://huggingface.co/evansu/qwen3_4b_disease_label_ft_v5
+- https://huggingface.co/evansu/qwen3_8b_disease_label_ft_v5
