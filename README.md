@@ -87,9 +87,9 @@ python -m evaluation.score
 ---
 
 # Results
-B = Baseline, F = Finetuned; 0.85 = number of 236 test set rows with at least 0.85 score.
+Baseline 0.85 = number of 236 test set rows with at least 0.85 score by baseline LLM.
 
-| Model | B 0.85 | F 0.85 |
+| Model | Baseline 0.85 | Finetuned 0.85 |
 | ----- | -------- | ------- |
 | Qwen 3 4B | 68 | 88 (**+29%**) |
 | Qwen 3 8B | 74 | 88 (**+19%**) |
