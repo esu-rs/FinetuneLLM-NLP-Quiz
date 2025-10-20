@@ -89,13 +89,16 @@ python -m evaluation.score
 # Results
 B = Baseline, F = Finetuned; 0.85 = number of 236 test set rows with at least 0.85 score.
 
-| Model | B 0.85 | F 0.85 | B 0.65 | F 0.65 |
-| ----- | -------- | ------- | ------- | ------- |
-| Qwen 3 4B | 68 | 78 (**+15%**) | 170 | 171 (**+1%**) |
-| Qwen 3 8B | 74 | 84 (**+14%**) | 179 | 180 (**+1%**) |
+| Model | B 0.85 | F 0.85 |
+| ----- | -------- | ------- |
+| Qwen 3 4B | 68 | 88 (**+29%**) |
+| Qwen 3 8B | 74 | 88 (**+19%**) |
+
+Baseline 4B average score: 0.74 → Finetuned 4B average score: 0.78 (**+5%**)<br>
+Baseline 8B average score: 0.75 → Finetuned 8B average score: 0.77 (**+3%**)
 
 The complete baseline and finetuned output labels and evaluation scores can be found in [results.xlsx](https://github.com/esu-rs/FinetuneLLM-NLP-Quiz/blob/main/output/results.xlsx).
 
 The finetuned models are available on Hugging Face:
-- https://huggingface.co/evansu/qwen3_4b_disease_label_ft_v5
-- https://huggingface.co/evansu/qwen3_8b_disease_label_ft_v5
+- https://huggingface.co/evansu/qwen3_4b_disease_label_ft_v7
+- https://huggingface.co/evansu/qwen3_8b_disease_label_ft_v7
